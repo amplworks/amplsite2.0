@@ -1,0 +1,49 @@
+
+
+.single h2 {
+  margin-top: calc(var(--bar) + var(--gutter));
+  margin-left: var(--gutter);
+}
+
+.single-inner {
+  margin: var(--gutter);
+}
+
+.single-inner p {
+  max-width: 60vw;
+}
+
+.single-inner figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figuregroup {
+  display: flex;
+  flex-flow: row wrap;
+  margin: var(--gutter) calc( -.5 * var(--gutter));
+}
+
+.casestudy .figuregroup figure {
+  flex-basis: calc(50% - var(--gutter));
+  margin: calc(.5 * var(--gutter));
+}
+.casestudy .single-inner figure:nth-last-of-type(6) ~ figure:nth-of-type(n + 2) img {
+  width: calc(100% - var(--gutter));
+}
+
+.casestudy .single-inner > figure:first-child {
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 660px) {
+
+  .casestudy .figuregroup figure {
+    flex-basis: auto;
+    width: 100%
+  }
+
+}

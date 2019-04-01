@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="home" lang="en" dir="ltr">
+<head>
+
+  {{ partial "head" .}}
+  <style media="screen">
+
+  .process-toggle,
+  .services-toggle {
+    opacity: .6;
+  }
+
+  </style>
+</head>
+<body class="background">
+  <header>{{ partial "header" .}}</header>
+  <section class="fold">
+    <h1 class="slogan"><span class="yellow">a</span>mpl <span class="sloganpt2">lights</span></h1>
+    <div class="subhead-wrap">
+      <div class="subhead">
+        {{ partial "subhead" .}}
+      </div>
+    </div>
+  </section>
+  <div id="caseStudies" class="caseStudies">
+    <div class="innerCont">
+      {{ range (where .Site.RegularPages "Type" "casestudy")}}
+      <div class="study-item">
+        <img src="{{ with .Params.image }}{{ . }}{{ end }}" />
+        <div class="item-text">
+          <a href="{{ .Permalink}}">{{ .Title }}</a>
+          <p>{{ .Description}}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <footer>{{ partial "footer" .}}</footer>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>

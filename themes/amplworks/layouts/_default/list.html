@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="blog" lang="en" dir="ltr">
+  <head>
+      {{ partial "head" .}}
+  </head>
+  <body>
+    {{ partial "header" .}}
+    <section class="fold">
+      <h1 class="slogan"><span class="yellow">a</span>.blog</span></h1>
+    </section>
+    <div class="innerCont">
+      {{ range (where .Site.RegularPages "Type" "blog")}}
+      <div class="study-item">
+        <div class="item-text">
+          <a href="{{ .Permalink}}">{{ .Title }}</a>
+          <p>{{ .Description}}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ partial "footer" .}}
+  </body>
+</html>

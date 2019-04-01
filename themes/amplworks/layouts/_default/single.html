@@ -1,0 +1,15 @@
+  <!DOCTYPE html>
+<html {{ with .Type }} class="{{ . }}" {{ end }} lang="en" dir="ltr">
+<head>
+{{partial "head"}}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/single.css">
+</head>
+<body class="single">
+  {{ partial "header" . }}
+  <h2>{{ .Title}}</h2>
+  <div class="single-inner cf">
+        {{ .Content }}
+  </div>
+  {{ partial "footer" . }}
+</body>
+</html>

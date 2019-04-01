@@ -1,0 +1,225 @@
+/* ------ the following is code for the header and dropdown nav- menu */
+.nav-wrap {
+  cursor: pointer;
+  transition: all 100ms ease;
+  display: none;
+  padding-right: 2rem;
+}
+
+.nav-line1,
+.nav-line2,
+.nav-line3 {
+  background-color: #000;
+  display: block;
+  height: .25rem;
+  width: 2.5rem;
+  margin-bottom: .375rem;
+  border-radius: 10%;
+  transition: all 300ms ease;
+  transition: background-color 1s ease;
+}
+
+.nav-wrap:nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.nav-wrap:nth-child(3) {
+  transition-delay: 180ms;
+}
+
+.nav-wrap:hover>.nav-line1 {
+  width: 2rem;
+  transform: translateX(-.5rem);
+}
+
+.nav-wrap:hover>.nav-line2 {
+  width: 1.5rem;
+  transform: translateX(1rem);
+}
+
+.nav-wrap:hover>.nav-line3 {
+  width: 1rem;
+}
+
+.nav-wrap:hover {
+  transform: rotate(45deg);
+}
+
+.toppanel {
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  top: -100vh;
+  right: 0;
+  left: 0;
+  background-color: #191919;
+  transition: .7s;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navopen .toppanel {
+  transform: translateY(100vh)
+}
+
+.navopen .scrollind {
+  opacity: 0
+}
+
+.menu-ico {
+  position: absolute;
+  left: 12vw;
+  top: 51vh;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  color: #f9f9f9;
+}
+
+.navitem-wrap {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: var(--lineHeight);
+  width: 30vw;
+}
+
+.navitem {
+  text-decoration: none;
+  font-size: var(--fontSize);
+  color: #f9f9f9;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+  margin-top: var(--lineHeight);
+}
+
+.navitem:hover {
+  padding-left: 1rem;
+}
+
+.navitem:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  bottom: calc(var(--fontSize) * .35);
+  left: 0;
+  z-index: -1;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background-color: #fad420;
+}
+
+.navitem:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  background-color: #fad420;
+}
+
+.brand {
+  color: #fad420;
+}
+
+.scocialcontact {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-in {
+  display: block;
+  color: #f9f9f9;
+  font-family: 'futura-pt', sans-serif;
+}
+
+.contact-in a {
+  color: #fad420;
+  font-family: 'futura-pt', sans-serif;
+}
+
+.social {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20vw;
+  margin-top: calc(var(--lineHeight) * .5);
+}
+
+.social img {
+  width: 40px;
+  margin-right: 1rem;
+}
+
+.bar {
+  height: var(--bar);
+  position: fixed;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content:space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.title {
+  width: 3rem;
+  margin-left: var(--gutter);
+}
+
+.titleend {
+  transition: display ease .8s;
+}
+
+.home .barimg {
+  visibility: hidden;
+}
+.mail {
+  color: #fad420;
+  font-size: calc(var(--fontSize) * .5);
+  font-weight: 800;
+}
+
+.nav-large {
+
+  margin-right: var(--gutter);
+  font-size: calc(var(--fontSize) * .5);
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 800;
+}
+
+.nav-large a{
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+
+  .nav-wrap {
+    display: block;
+  }
+  .nav-large {
+    display: none;
+  }
+
+  .bar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mail {
+    margin-left: 1rem
+  }
+
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      {{ partial "head" .}}
+      <style media="screen">
+
+      .process-toggle,
+      .cs-toggle {
+        opacity: .6;
+      }
+
+      </style>
+    </head>
+  <body>
+    <header>{{ partial "header" .}}</header>
+    <section class="fold">
+      <h1 class="slogan"><span class="yellow">a</span>mpl <span class="sloganpt2">service</span></h1>
+      <div class="subhead-wrap">
+        <div class="subhead">
+          {{ partial "subhead" .}}
+        </div>
+      </div>
+    </section>
+    <main class="services-wrap">
+      <div class="services-title">
+        <h2>its not what <em>we</em> can do for you</h2>
+        <h2>its what <em>you</em> can do for you</h2>
+        <h2><em>hint hint</em> pick us</h2>
+      </div>
+      <section class="services-inner">
+        <div class="service-item">
+          <h4>branding</h4>
+          <ul>
+            <li><a href="#">-identity design</a></li>
+            <li><a href="#">-design systems</a></li>
+            <li>art direction</li>
+            <li><a href="#">-print</a></li>
+            <li><a href="#">-packaging</a></li>
+            <li><a href="#">-campaigns</a></li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h4>content</h4>
+          <ul>
+            <li><a href="#">content development</a></li>
+            <li><a href="#">-film</a></li>
+            <li><a href="#">-social media</a></li>
+            <li>animation</li>
+            <li><a href="#">-copywriting</a></li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h4>strategy</h4>
+          <ul>
+            <li>brand positioning</li>
+            <li><a href="#">-brand architecture</a></li>
+            <li><a href="#">-naming</a></li>
+            <li>content delivery</li>
+            <li><a href="#">-social media strategy</a></li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h4>interactive</h4>
+          <ul>
+            <li><a href="#">-ux / ui</a></li>
+            <li>information architecture</li>
+            <li><a href="#">-website design</a></li>
+            <li><a href="#">-mobile design</a></li>
+            <li><a href="#">-digital experience</a></li>
+          </ul>
+        </div>
+      </section>
+      <p class="dis"> the "-" means we've taken the time to write a case study, give that mouse finger a workout.</p>
+    </main>
+    <footer>{{ partial "footer" .}}</footer>
+  </body>
+</html>

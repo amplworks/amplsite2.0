@@ -1,0 +1,46 @@
+
+h4 {
+ font-size: calc(var(--fontSize) * .6);
+ font-weight: 600;
+}
+
+h5 {
+  font-size: calc(var(--fontSize) * .4);
+}
+
+
+.services-title {
+  width: 75vw;
+  padding-left: var(--gutter);
+  margin-top: 3em;
+}
+
+.services-inner {
+  display: flex;
+  flex-flow: row wrap;
+  padding: var(--gutter);
+  width: 90vw;
+}
+.service-item {
+  padding: 3em;
+  padding-left: 0;
+}
+.service-item ul {
+  font-size: calc(var(--fontSize) * .6);
+  line-height: 1.2;
+  list-style-type: none;
+  padding-left: .25em;
+}
+
+.dis {
+    font-size: calc(var(--fontSize) * .4);
+    padding-left: var(--gutter);
+    padding-bottom: 2em;
+  }
+
+@media screen and (max-width: 750px) {
+
+  .services-inner {
+    padding-left: calc(var(--gutter));
+  }
+}

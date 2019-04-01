@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html class="process" lang="en" dir="ltr">
+<head>{{ partial "head" .}}</head>
+<body class="background">
+  <header>{{ partial "header" .}}</header>
+  <section class="fold">
+    <h1 class="slogan"><span class="yellow">a</span>mpl process</h1>
+  </section>
+    <div class="wrap">
+      <section class="about-top flow">
+        <h2>Our Process</h2>
+        {{ .Content }}
+      </section>
+  </div>
+  <footer>{{ partial "footer" .}}</footer>
+  <!-- <script src="{{ .Site.BaseURL }}/js/main.js" charset="utf-8"></script> -->
+</body>
+</html>
